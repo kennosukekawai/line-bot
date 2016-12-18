@@ -89,7 +89,7 @@ class Route
                     default :
                         $rand_text = "ほんとに？？" ;
                 } 
-                /*
+                
                 $user_text = $event->getText() ;
                 switch($user_text){
                     case "暇じゃないんで。。。" :
@@ -106,16 +106,12 @@ class Route
                         break ;
                     default :
                         $replyText = $rand_text ;
-                } */
+                } 
                 $replyText = $rand_text;
                 $logger->info('Reply text: ' . $replyText);
                 $resp = $bot->replyText($event->getReplyToken(), $replyText);
                 $logger->info($resp->getHTTPStatus() . ': ' . $resp->getRawBody());
-                
-                                $replyText = $rand_text;
-                $logger->info('Reply text: ' . $replyText);
-                $resp = $bot->replyText($event->getReplyToken(), $replyText);
-                $logger->info($resp->getHTTPStatus() . ': ' . $resp->getRawBody());
+
             }
 
             $res->write('OK');
