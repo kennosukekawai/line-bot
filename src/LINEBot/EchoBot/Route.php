@@ -98,7 +98,7 @@ class Route
                             ) ;
                         break ; 
                     default :
-                        $reply_text = $rand_text ;
+                        $replyText = $rand_text ;
                 }
                 //$replyText = $rand_text;
                 $logger->info('Reply text: ' . $replyText);
