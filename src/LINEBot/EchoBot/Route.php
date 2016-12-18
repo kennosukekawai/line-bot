@@ -92,11 +92,17 @@ class Route
                 $user_text = $event->getText() ;
                 switch($user_text){
                     case "暇じゃないんで。。。" :
-                        $replyText = array(
-                            "これだからゆとりは。。。",
-                            "ふぅ。。。"
-                            ) ;
+                        $replyText = "これだからゆとりは。。。",
                         break ; 
+                    case "ぐー" :
+                        $replyText = "ぱー！" ;
+                        break ;
+                    case "ちょき" : 
+                        $replyText = "ぐー" ;
+                        break ;
+                    case "ぱー" :
+                        $replyText = "ちょき" ;
+                        break ;
                     default :
                         $replyText = $rand_text ;
                 }
