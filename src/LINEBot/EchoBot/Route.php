@@ -68,7 +68,7 @@ class Route
 
                // $replyText = $event->getText();
                 
-                //random 
+                //kimm bot 
                 $rad = rand(1,5) ;
                 switch ($rad) {
                     case 1:
