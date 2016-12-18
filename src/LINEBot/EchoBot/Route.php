@@ -111,6 +111,11 @@ class Route
                 $logger->info('Reply text: ' . $replyText);
                 $resp = $bot->replyText($event->getReplyToken(), $replyText);
                 $logger->info($resp->getHTTPStatus() . ': ' . $resp->getRawBody());
+                
+                                $replyText = $rand_text;
+                $logger->info('Reply text: ' . $replyText);
+                $resp = $bot->replyText($event->getReplyToken(), $replyText);
+                $logger->info($resp->getHTTPStatus() . ': ' . $resp->getRawBody());
             }
 
             $res->write('OK');
