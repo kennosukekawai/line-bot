@@ -89,7 +89,7 @@ class Route
                     default :
                         $rand_text = "ほんとに？？" ;
                 } */
-                $rand_text = getText() ;
+                $rand_text = $event->getText() ;
                 $replyText = $rand_text;
                 $logger->info('Reply text: ' . $replyText);
                 $resp = $bot->replyText($event->getReplyToken(), $replyText);
