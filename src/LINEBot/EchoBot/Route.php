@@ -67,7 +67,29 @@ class Route
                 }
 
                // $replyText = $event->getText();
-                $replyText = "はいはい";
+                
+                //random 
+                $rad = rand(1,5) ;
+                switch ($rad) {
+                    case 1:
+                        $rand_text = "あーすごーい！" ;
+                        break ;
+                    case 2:
+                        $rand_text = "んーちょっとcomplicated..." ;
+                        break ;
+                    case 3:
+                        $rand_text = "んんんー⤴!" ;
+                        break ;
+                    case 4 :
+                        $rand_text = "平田さん、ちょっといい？？" ;
+                        break ;
+                    case 5 :
+                        $rand_text = "F〇UK！！" ;
+                        break ;
+                    default :
+                        $rand_text = "ほんとに？？" ;
+                }
+                $replyText = $rand_text;
                 $logger->info('Reply text: ' . $replyText);
                 $resp = $bot->replyText($event->getReplyToken(), $replyText);
                 $logger->info($resp->getHTTPStatus() . ': ' . $resp->getRawBody());
