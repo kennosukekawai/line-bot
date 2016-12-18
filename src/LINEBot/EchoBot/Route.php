@@ -68,7 +68,7 @@ class Route
 
                // $replyText = $event->getText();
                 
-                //kimm bot 
+                /*kimm bot 
                 $rad = rand(1,5) ;
                 switch ($rad) {
                     case 1:
@@ -88,7 +88,8 @@ class Route
                         break ;
                     default :
                         $rand_text = "ほんとに？？" ;
-                }
+                } */
+                $rand_text = getText() ;
                 $replyText = $rand_text;
                 $logger->info('Reply text: ' . $replyText);
                 $resp = $bot->replyText($event->getReplyToken(), $replyText);
