@@ -107,7 +107,7 @@ class Route
                     default :
                         $replyText = $rand_text ;
                 } 
-                $replyText = $rand_text;
+               // $replyText = $rand_text;
                 $logger->info('Reply text: ' . $replyText);
                 $resp = $bot->replyText($event->getReplyToken(), $replyText);
                 $logger->info($resp->getHTTPStatus() . ': ' . $resp->getRawBody());
