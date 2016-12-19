@@ -66,7 +66,7 @@ class Route
                     continue;
                 }
 
-               // $replyText = $event->getText();
+                $userText = $event->getText();
                 
                 //kimm bot 
                 $rad = rand(1,5) ;
@@ -90,8 +90,7 @@ class Route
                         $rand_text = "ほんとに？？" ;
                 } 
                 
-                $user_text = $event->getText() ;
-                switch($user_text){
+                switch($userText){
                     case "暇じゃないんで。。。" :
                         $replyText = "これだからゆとりは。。。",
                         break ; 
